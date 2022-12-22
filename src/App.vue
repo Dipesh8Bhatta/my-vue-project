@@ -7,6 +7,7 @@
     <LifeCycleTest v-if="numberOfDamnClicks < 10" :numberOfDamnClicks="numberOfDamnClicks"></LifeCycleTest>
     <Timer @tick="onTick" name="Timer 1" :delay=3000></Timer>
     <Timer @tick="onTick" name="Timer 2" :delay=10000></Timer>
+    <FlashingMessage message="Keep on flashing" :delay=2000></FlashingMessage>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import NoDataCounterButton from "./components/state_examples/NoDataCounterButton
 import Congratulations from "./components/state_examples/Congratulations";
 import LifeCycleTest from "./components/life_cycle_hook/LifeCycleTest";
 import Timer from "./components/click_and_events/Timer";
+import FlashingMessage from "./components/conditional_rendering/FlashingMessage";
 
 export default {
   name: 'App',
@@ -27,6 +29,7 @@ export default {
     NoDataCounterButton,
     LifeCycleTest,
     Timer,
+    FlashingMessage,
   },
   data() {
     return {
