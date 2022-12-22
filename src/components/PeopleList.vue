@@ -11,7 +11,7 @@
     <PeopleListItemObjectProps :person="{ name: 'Vinsomke Sanji', age: 103, hairColor: 'yellow' }"> </PeopleListItemObjectProps>
     <PeopleListItemObjectProps :person="person1"> </PeopleListItemObjectProps>
     <PeopleListItemObjectProps :person="person2"> </PeopleListItemObjectProps>
-
+    <PeopleListItemObjectProps v-for="person in people" :key="person.name" :person="person"></PeopleListItemObjectProps>
   </div>
 </template>
 
@@ -33,6 +33,11 @@ export default {
       hairColor: 'brown',
       person1: { name: "Naami Swaa", age: 95, hairColor: "orange" },
       person2: { name: "Robin Chwa", age: 104, hairColor: "black" },
+      people: [
+        { name: "Tony Tony Chopper", age: 89, hairColor: "brown" },
+        { name: "Soul King Brook", age: 150, hairColor: "black" },
+        { name: "Super Franky", age: 125, hairColor: "blue" },
+      ],
     }
   }
 }
