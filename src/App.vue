@@ -1,17 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Congratulations :numberOfDamnClicks="numberOfDamnClicks"></Congratulations>
+    <CounterButton> </CounterButton>
+    <NoDataCounterButton @incrementGoal="incrementGoal" :numberOfDamnClicks="numberOfDamnClicks"> </NoDataCounterButton>
+    <PeopleList> </PeopleList>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PeopleList from './components/PeopleList.vue'
+import CounterButton from "./components/state_examples/CounterButton.vue";
+import NoDataCounterButton from "./components/state_examples/NoDataCounterButton";
+import Congratulations from "./components/state_examples/Congratulations";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Congratulations,
+    PeopleList,
+    CounterButton,
+    NoDataCounterButton,
+  },
+  data() {
+    return {
+      numberOfDamnClicks: 0,
+    }
+  },
+  methods: {
+    incrementGoal() {
+      this.numberOfDamnClicks += 1;
+    },
   }
 }
 </script>
