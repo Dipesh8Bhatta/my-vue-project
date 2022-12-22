@@ -12,3 +12,8 @@ export default {
   props: ['name', 'age', 'hairColor'],
 }
 </script>
+<style scoped>
+h3 {
+  color: blue;
+}
+</style>

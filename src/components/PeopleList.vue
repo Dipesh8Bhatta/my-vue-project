@@ -42,3 +42,12 @@ export default {
   }
 }
 </script>
+
+<style>
+h1 {
+  color: green;
+}
+h3 {
+  color: orangered;
+}
+</style>
