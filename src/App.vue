@@ -4,6 +4,7 @@
     <CounterButton> </CounterButton>
     <NoDataCounterButton @incrementGoal="incrementGoal" :numberOfDamnClicks="numberOfDamnClicks"> </NoDataCounterButton>
     <PeopleList> </PeopleList>
+    <LifeCycleTest v-if="numberOfDamnClicks < 10" :numberOfDamnClicks="numberOfDamnClicks"></LifeCycleTest>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import PeopleList from './components/PeopleList.vue'
 import CounterButton from "./components/state_examples/CounterButton.vue";
 import NoDataCounterButton from "./components/state_examples/NoDataCounterButton";
 import Congratulations from "./components/state_examples/Congratulations";
+import LifeCycleTest from "./components/life_cycle_hook/LifeCycleTest";
 
 export default {
   name: 'App',
@@ -20,6 +22,7 @@ export default {
     PeopleList,
     CounterButton,
     NoDataCounterButton,
+    LifeCycleTest,
   },
   data() {
     return {
