@@ -6,19 +6,20 @@
         <h3>{{ product.name }}</h3>
       </router-link>
       <h3>{{ product.price }}</h3>
-      <button>Add to Cart</button>
+      <button @click="addToCart(product.id)">Add to Cart</button>
     </div>
   </div>
 </template>
 
 <script>
-import products from "./products";
 export default {
   name: 'ProductListPage',
-  data() {
-    return {
-      products,
+  props: ['products'],
+  emits: ['addToCart'],
+  methods: {
+    addToCart(id) {
+      this.$emit('addToCart', id);
     }
-  },
+  }
 };
 </script>
